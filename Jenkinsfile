@@ -23,5 +23,5 @@ node {
             from: 'jenkins@noreply.com',
             replyTo: 'rajat.bansal@hcentive.com',
             subject: 'project build status',
-            to: 'rajat.bansal@hcentive.com
+            to: 'rajat.bansal@hcentive.com'
 }
