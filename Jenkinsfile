@@ -16,4 +16,12 @@ node {
 		stage 'Build'
 		// Run the maven build
 		sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
+		
+		stage 'Email'
+			
+		mail body: "project build error" ,
+            from: 'jenkins@noreply.com',
+            replyTo: 'rajat.bansal@hcentive.com',
+            subject: 'project build status',
+            to: 'rajat.bansal@hcentive.com
 }
