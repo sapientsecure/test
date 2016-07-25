@@ -4,7 +4,7 @@ node {
 		// Mark the code checkout 'stage'....
 		//  svn 'https://svn.hcinternal.net/svn/PLATFORM/MAHIX/MAHIX/trunk'
 		// Get some code from a GitHub repository
-		  git url: 'https://github.com/sapientsecure/test.git' , branch: master
+		  git url: 'https://github.com/sapientsecure/test.git'
 		//svn url: 'https://svn.hcinternal.net/svn/PLATFORM/MAHIX/MAHIX'
 
 		// Get the maven tool.
