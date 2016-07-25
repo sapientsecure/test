@@ -19,7 +19,7 @@ node {
 		
 		stage 'Email'
 			
-		mail body: "project build error" ,
+		mail body: "project build status will come here" ,
             from: 'jenkins@noreply.com',
             replyTo: 'rajat.bansal@hcentive.com',
             subject: 'project build status',
