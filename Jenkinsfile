@@ -20,10 +20,8 @@ node {
 		sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
 		
 		stage 'Email'
-	emailext (body: 'A Test EMail', 
-		 subject: 'Test', 
-		 from: 'jenkins@localhost.com',	
-		 to: 'rajat.bansal@hcentive.com');
+		emailext body: 'sdfsdfsdf' , subject: 'it failed :(', to: 'rajat.bansal@hcentive.com'
+	
 		//recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], 
 		
 
