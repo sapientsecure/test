@@ -22,10 +22,9 @@ node {
 		stage 'Email'
 		
 		emailext recipients: 'rajat.bansal@hcentive.com',
-      			  content-type: 'html',
-      			  subject: "Subject for Build ${BUILD_NUMBER}"
-      			  body: 'The build has finished'
-      			  always: true
+      			  subject: "Subject for Build ${BUILD_NUMBER}",
+      			  body: 'The build has finished',
+      			  always: true,
       			  send-to:
 			     - recipients
         
