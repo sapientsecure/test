@@ -26,7 +26,7 @@ node {
 		 attachLog: true ,
 		 compressLog: true,
 		 to: 'rajat.bansal@hcentive.com',
-		 recipientProviders: [$class: 'ListRecipientProvider']
+		// recipientProviders: [$class: 'ListRecipientProvider']
       	
         
 }
