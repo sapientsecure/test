@@ -24,8 +24,7 @@ node {
 		emailext recipients: 'rajat.bansal@hcentive.com',
       			  subject: "Subject for Build ${BUILD_NUMBER}",
       			  body: 'The build has finished',
-      			  always: true,
-      			  send-to:
-			     - recipients
+      			  always: true
+      	
         
 }
