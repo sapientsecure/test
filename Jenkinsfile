@@ -22,7 +22,7 @@ node {
 		stage 'Email'
 		
 		emailext recipients: 'rajat.bansal@hcentive.com',
-      			  subject: "Subject for Build ${BUILD_NUMBER}",
+      			  subject: "Subject for Build ${env.BUILD_NUMBER}",
       			  body: 'The build has finished',
       			  always: true
       	
