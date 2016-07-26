@@ -22,6 +22,6 @@ node {
 		stage 'Email'
 			
 		mail (to: 'rajat.bansal@hcentive.com',from: 'jenkins@localhost.com',
-         subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
+         subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",attachment: "*"
          body: "Please go to ${env.BUILD_URL}.");
 }
