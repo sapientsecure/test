@@ -25,7 +25,7 @@ node {
       			  subject: "Subject for Build ${env.BUILD_NUMBER}",
       			  body: 'The build has finished',
       			  always: true,
-      			  to: 'rajat.bansal@hcentive.com'
+      			  to: 'rajat.bansal@hcentive.com,b.rajat@yahoo.co.in'
       	
         
 }
