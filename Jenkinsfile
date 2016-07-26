@@ -21,31 +21,31 @@ node {
 		sh "echo hello"
 		stage 'Email'
 		
-		email-ext recipients: rajat.bansal@hcentive.com
-      reply-to: foo@example.com
-      content-type: html
-      subject: Subject for Build ${BUILD_NUMBER}
-      body: The build has finished
-      attach-build-log: false
-      attachments: "*/foo*.log"
-      always: true
-      unstable: true
-      first-failure: true
-      not-built: true
-      aborted: true
-      regression: true
-      failure: true
-      second-failure: true
-      improvement: true
-      still-failing: true
-      success: true
-      fixed: true
-      still-unstable: true
-      pre-build: true
-      matrix-trigger: only-configurations
-      presend-script: "cancel=true"
-      save-output: true
-      send-to:
-         - recipients
+		email-ext recipients: rajat.bansal@hcentive.com,
+      			  reply-to: foo@example.com,
+      			  content-type: html,
+      			  subject: Subject for Build ${BUILD_NUMBER}
+      			  body: The build has finished
+      			  attach-build-log: false
+      			  attachments: "*/foo*.log"
+      			  always: true
+      			  unstable: true
+      			  first-failure: true
+      			  not-built: true
+      			  aborted: true
+      			  regression: true
+      			  failure: true
+      			  second-failure: true
+      			  improvement: true
+      			  still-failing: true
+      			  success: true
+      			  fixed: true
+      			  still-unstable: true
+      			  pre-build: true
+      			  matrix-trigger: only-configurations
+      			  presend-script: "cancel=true"
+      			  save-output: true
+      			  send-to:
+			     - recipients
         
 }
