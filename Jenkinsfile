@@ -17,14 +17,14 @@ node {
 		// Mark the code build 'stage'....
 		stage 'Build'
 		// Run the maven build
-		sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
-		
+		//sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
+		sh "echo hello"
 		stage 'Email'
 		
 		emailext body: 'sdfsdfsdf' , 
 		subject: 'it failed :(', 
 		to: 'rajat.bansal@hcentive.com',
-		recipientProviders: 'rajat.bansal@hcentive.com',replyTo: 'rajat.bansal@hcentive.com'
+		replyTo: 'rajat.bansal@hcentive.com'
 	
 		//recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], 
 		
