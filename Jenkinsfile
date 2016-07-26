@@ -21,5 +21,5 @@ node {
             replyTo: 'rajat.bansal@hcentive.com',
             subject: 'project build status',
             to: 'rajat.bansal@hcentive.com',
-            attachmentsPattern: "junitmavenexample/target/surefire-reports/*"
+            attachmentsPattern: "hello"
 }
