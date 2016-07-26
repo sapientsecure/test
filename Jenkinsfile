@@ -20,15 +20,7 @@ node {
 		//sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
 		sh "echo hello"
 		stage 'Email'
-		recipients = msg.getRecipients(javax.mail.Message.RecipientType.TO)
-filtered = recipients.findAll { addr -> addr.toString().contains('@hcentive.com') }
-msg.setRecipients(javax.mail.Message.RecipientType.TO, filtered as javax.mail.Address[])
-	emailext subject: 'this is subject',
-		 body: 'This is body',
-		 attachLog: true ,
-		 compressLog: true,
-		 to: 'rajat.bansal@hcentive.com'
-		// recipientProviders: [$class: 'ListRecipientProvider']
-      	
+		emailext attachmentsPattern: 'Java Project/target/surefire-reports/*', body: 'job body ', subject: 'This build ', to: 'rajat.bansal@hcentive.com'
+
         
 }
