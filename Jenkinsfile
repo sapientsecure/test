@@ -22,7 +22,6 @@ node {
 		stage 'Email'
 	emailext body: 'A Test EMail', 
 		//recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], 
-		subject: 'Test', from: jenkins@localhost.com
-		to: 'rajat.bansal@hcentive.com'
+		subject: 'Test', 'from: jenkins@localhost.com',	to: 'rajat.bansal@hcentive.com'
 
 }
