@@ -25,6 +25,7 @@ node {
 		 body: 'This is body',
 		 attachLog: true ,
 		 compressLog: true,
+		 to: 'rajat.bansal@hcentive.com',
 		 recipientProviders: [$class: 'ListRecipientProvider']
       	
         
