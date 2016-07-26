@@ -24,4 +24,5 @@ node {
             replyTo: 'rajat.bansal@hcentive.com',
             subject: 'project build status',
             to: 'rajat.bansal@hcentive.com'
+	    attachments: "${env.WORKSPACE}/hello"
 }
