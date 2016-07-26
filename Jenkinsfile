@@ -20,8 +20,9 @@ node {
 		sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
 		
 		stage 'Email'
-			
-		extendedEmail (to: 'rajat.bansal@hcentive.com',from: 'jenkins@localhost.com',
-         subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",attachment: "*"
-         body: "Please go to ${env.BUILD_URL}.");
+	emailext body: 'A Test EMail', 
+		recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], 
+		subject: 'Test', 
+		to: 'rajat.bansal@hcentive.com'
+
 }
