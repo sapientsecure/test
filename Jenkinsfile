@@ -21,7 +21,7 @@ node {
 		sh "echo hello"
 		stage 'Email'
 		
-		email-ext recipients: rajat.bansal@hcentive.com,
+		emailext recipients: rajat.bansal@hcentive.com,
       			  reply-to: foo@example.com,
       			  content-type: html,
       			  subject: Subject for Build ${BUILD_NUMBER}
