@@ -2,9 +2,11 @@ node {
 	env.WORKSPACE = pwd()
 	echo "${env.WORKSPACE}"
 		// Mark the code checkout 'stage'....
+		stage 'Checkut'
+			checkout scm
 		//  svn 'https://svn.hcinternal.net/svn/PLATFORM/MAHIX/MAHIX/trunk'
 		// Get some code from a GitHub repository
-		  git url: 'https://github.com/sapientsecure/test.git' ,branch: 'master'
+//		  git url: 'https://github.com/sapientsecure/test.git' ,branch: 'master'
 		//svn url: 'https://svn.hcinternal.net/svn/PLATFORM/MAHIX/MAHIX'
 
 		// Get the maven tool.
