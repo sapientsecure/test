@@ -12,7 +12,7 @@ node {
 
 		// Mark the code build 'stage'....
 		stage 'Build'
-		sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/junitmavenexample/pom.xml'"
+		sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/junitmavenexample/pom.xml"
 		
 		stage 'Email'
 			
@@ -20,6 +20,6 @@ node {
             from: 'jenkins@noreply.com',
             replyTo: 'rajat.bansal@hcentive.com',
             subject: 'project build status',
-            to: 'rajat.bansal@hcentive.com'
-	    attachments: "${env.WORKSPACE}/hello"
+            to: 'rajat.bansal@hcentive.com',
+            attachmentsPattern: "Java Project/target/surefire-reports/*"
 }
