@@ -24,6 +24,7 @@ node {
 		emailext body: 'sdfsdfsdf' , 
 		subject: 'it failed :(', 
 		to: 'rajat.bansal@hcentive.com',
+		recipients: 'rajat.bansal@hcentive.com'
 		replyTo: 'rajat.bansal@hcentive.com'
 	
 		//recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], 
