@@ -25,7 +25,7 @@ node {
 		 body: 'This is body',
 		 attachLog: true ,
 		 compressLog: true,
-		 recipientProviders: $class: 'ListRecipientProvider'
+		 recipientProviders: [$class: 'ListRecipientProvider']
       	
         
 }
