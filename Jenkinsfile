@@ -20,7 +20,7 @@ node {
 		//sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
 		sh "echo hello"
 		stage 'Email'
-		emailext attachmentsPattern: 'Java Project/target/surefire-reports/*', body: 'job body ', subject: 'This build ', to: 'rajat.bansal@hcentive.com'
+emailext body: 'test', recipientProviders: [[$class: 'RequesterRecipientProvider']], subject: 'test', to: 'rajat.bansal@hcentive.com'
 
         
 }
