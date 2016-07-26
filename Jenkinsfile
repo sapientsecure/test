@@ -22,7 +22,7 @@ node {
 		stage 'Email'
 		
 		emailext body: 'sdfsdfsdf' , 
-		subject: 'it failed :(', 
+		subject: 'it failed', 
 		to: 'rajat.bansal@hcentive.com',
 		recipients: 'rajat.bansal@hcentive.com'
 		replyTo: 'rajat.bansal@hcentive.com'
