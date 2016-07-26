@@ -1,6 +1,7 @@
 node {
 	env.WORKSPACE = pwd()
 	echo "${env.WORKSPACE}"
+	git url: 'https://github.com/sapientsecure/test.git'
 
 		// Get the maven tool.
 		// ** NOTE: This 'M3' maven tool must be configured
