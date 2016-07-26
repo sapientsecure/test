@@ -21,11 +21,11 @@ node {
 		sh "echo hello"
 		stage 'Email'
 		
-		emailext recipients: 'rajat.bansal@hcentive.com',
-      			  subject: "Subject for Build ${env.BUILD_NUMBER}",
-      			  body: 'The build has finished',
-      			  always: true,
-      			  to: 'rajat.bansal@hcentive.com,b.rajat@yahoo.co.in'
+	emailext subject: 'this is subject',
+		 body: 'This is body',
+		 attachLog: true ,
+		 compressLog: true,
+		 recipientProviders: $class: 'ListRecipientProvider'
       	
         
 }
