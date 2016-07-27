@@ -20,6 +20,6 @@ node {
 		sh "${mvnHome}/bin/mvn clean install -f ${env.WORKSPACE}/'Java Project/pom.xml'"
 		sh "echo hello"
 		stage 'Email'
-emailext attachLog: true, attachmentsPattern: 'Java Project/target/surefire-reports/*', body: 'Build BOdy comes here ', compressLog: true, subject: 'Build job ', to: 'rajat.bansal@hcentive.com'
+emailext attachLog: true, attachmentsPattern: 'Java Project/target/surefire-reports/*', body: '${FILE="*",path="Java\ Project/target/surefire-reports"} ', compressLog: true, subject: 'Build job ', to: 'rajat.bansal@hcentive.com'
      
 }
